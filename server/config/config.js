@@ -1,12 +1,12 @@
 // ===================
 // Puerto
 // ===================
-process.env.PORT = 3000; // process.env.PORT ||
+process.env.PORT = process.env.PORT || 3000; // 
 
 // ===================
 // Entorno
 // =================== 
-process.env.NODE_ENV = 'dev'; // process.env.NODE_ENV || 
+process.env.NODE_ENV = process.env.NODE_ENV || 'dev'; // 
 
 // ===================
 // Vencimiento del Token
@@ -16,7 +16,7 @@ process.env.CADUCIDAD_TOKEN = { expiresIn: '120h' };
 // ===================
 // SEED
 // =================== 
-process.env.SEED = 'este-es-el-seed-desarrollo'; // process.env.SEED ||
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo'; // 
 
 // ===================
 // Base de datos
@@ -24,11 +24,11 @@ process.env.SEED = 'este-es-el-seed-desarrollo'; // process.env.SEED ||
 let urlDB;
 
 
-// if (process.env.NODE_ENV === 'dev') {
-urlDB = 'mongodb://localhost:27017/proyecto';
-// } else {
-//     urlDB = process.env.MONGO_URI;
-// }
+if (process.env.NODE_ENV === 'dev') {
+    urlDB = 'mongodb://localhost:27017/proyecto';
+} else {
+    urlDB = process.env.MONGO_URI;
+}
 process.env.URLDB = urlDB;
 
 // ===================
