@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 let cajaSchema = new Schema({
     deviceId: {
         type: String,
-        // required: [true, 'El device es necesario']
+        required: [true, 'El device es necesario']
     },
     barcode: {
         type: String,
