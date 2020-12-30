@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let cajaSchema = new Schema({
-    nombre: {
+    deviceId: {
         type: String,
-        // required: [true, 'El nombre es necesario']
+        // required: [true, 'El device es necesario']
     },
     barcode: {
         type: String,

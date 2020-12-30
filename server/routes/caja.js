@@ -47,7 +47,7 @@ app.post('/caja', (req, res) => {
     let hoy = new Date();
 
     let caja = new Caja({
-        nombre: body.nombre,
+        deviceId: body.deviceId,
         barcode: body.barcode,
         fecha: hoy,
         linea: body.linea
