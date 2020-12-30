@@ -50,7 +50,7 @@ app.post('/caja', (req, res) => {
         deviceId: body.deviceId,
         barcode: body.barcode,
         fecha: hoy,
-        linea: body.linea
+        // linea: body.linea
     });
 
     caja.save((err, cajaDB) => {

@@ -15,10 +15,10 @@ let cajaSchema = new Schema({
         type: Date,
         required: [true, 'La fecha es necesaria']
     },
-    linea: {
-        type: Schema.Types.ObjectId,
-        ref: 'Linea'
-    }
+    // linea: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Linea'
+    // }
 });
 
 module.exports = mongoose.model('Caja', cajaSchema);
