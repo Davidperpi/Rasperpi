@@ -44,13 +44,13 @@ app.post('/caja', (req, res) => {
 
     let body = req.body;
 
-    let hoy = new Date();
+    // let hoy = new Date();
 
     let caja = new Caja({
         deviceId: body.deviceId,
         barcode: body.barcode,
-        fecha: hoy,
-        // linea: body.linea
+        fecha: body.fecha
+            // linea: body.linea
     });
 
     caja.save((err, cajaDB) => {
